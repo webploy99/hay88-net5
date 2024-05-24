@@ -28,3 +28,26 @@ function OpenNav(){
     document.body.scrollTop = 0;
     document.documentElement.scrollTop = 0;
     }
+
+    // splide slide show
+    document.addEventListener('DOMContentLoaded', function () {
+        var splide = new Splide('.splide', {
+            perPage: 3,
+            gap: '20px',
+            type: 'loop',
+            autoplay: true,
+            interval: 3000,
+            snap: true,
+            breakpoints: {
+                768: {
+                    perPage: 2
+                },
+                448: {
+                    perPage: 1
+                }
+            }
+            // start: 2,
+            // pagination: false,
+        });
+        splide.mount();
+    });
